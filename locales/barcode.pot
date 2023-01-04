@@ -1,0 +1,4 @@
+
+#: hook.php:49
+msgid "Print QRcodes"
+msgstr ""
