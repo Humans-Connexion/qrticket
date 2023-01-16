@@ -1,5 +1,4 @@
 <?php
-
 /*
    ------------------------------------------------------------------------
    Customizations
@@ -15,7 +14,7 @@
    ------------------------------------------------------------------------
  */
 
-define ("PLUGIN_CUSTOMIZATIONS_VERSION", "0.1.0");
+define ("PLUGIN_CUSTOMIZATIONS_VERSION", "0.2.0");
 
 // Minimal GLPI version, inclusive
 define('PLUGIN_CUSTOMIZATIONS_MIN_GLPI', '10.0.0');
@@ -31,6 +30,8 @@ function plugin_init_customizations() {
    $PLUGIN_HOOKS['csrf_compliant']['customizations'] = true;
 
    $PLUGIN_HOOKS['use_massive_action']['customizations'] = 1;
+
+   $PLUGIN_HOOKS['add_javascript']['customizations'] = array('js/customizations.js');
 }
 
 function plugin_version_customizations() {
