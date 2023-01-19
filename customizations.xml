@@ -21,7 +21,7 @@
       <version>
          <num>0.2.4</num>
          <compatibility>~10.0.5</compatibility>
-         <download_url>https://github.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner/releases/0.2.4/</download_url>
+         <download_url>https://github.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner/archive/refs/tags/0.2.4.zip</download_url>
       </version>
    </versions>
    <langs>
