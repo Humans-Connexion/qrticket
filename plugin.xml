@@ -4,12 +4,12 @@
    <state>stable</state>
    <description>
       <short>
-         <fr><![CDATA[Personnalisez les champs de l'ordinateur et ajoutez des fonctionnalités pour la création de code QR.]]></fr>
-         <en><![CDATA[Customize computer's fields and add functionality for QR code creation.]]></en>
+         <fr>Personnalisez les champs de l'ordinateur et ajoutez des fonctionnalités pour la création de code QR.</fr>
+         <en>Customize computer's fields and add functionality for QR code creation.</en>
       </short>
       <long>
-         <fr><![CDATA[Personnalisez les champs de l'ordinateur et ajoutez des fonctionnalités pour la création de code QR.]]></fr>
-         <en><![CDATA[Customize computer's fields and add functionality for QR code creation.]]></en>
+         <fr>Personnalisez les champs de l'ordinateur et ajoutez des fonctionnalités pour la création de code QR.</fr>
+         <en>Customize computer's fields and add functionality for QR code creation.</en>
       </long>
    </description>
    <homepage>https://github.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner</homepage>
