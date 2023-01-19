@@ -24,9 +24,5 @@
          <download_url>https://github.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner/archive/refs/tags/0.2.4.zip</download_url>
       </version>
    </versions>
-   <langs>
-      <lang>en_GB</lang>
-      <lang>fr_FR</lang>
-   </langs>
    <license>GPL v2+</license>
 </root>
