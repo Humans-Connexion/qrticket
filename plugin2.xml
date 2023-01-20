@@ -41,7 +41,7 @@
       </fr>
    </tags>
    <screenshots>
-      <screenshot>https://github.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner/blob/master/img/screenshot.png</screenshot>
-      <screenshot>https://github.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner/blob/master/img/screenshot_fr.png</screenshot>
+      <screenshot>https://raw.githubusercontent.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner/master/img/screenshot.png</screenshot>
+      <screenshot>https://raw.githubusercontent.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner/master/img/screenshot_fr.png</screenshot>
    </screenshots>
 </root>
