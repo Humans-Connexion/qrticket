@@ -35,6 +35,9 @@
       <en>
          <tag>Customization</tag>
       </en>
+      <fr>
+         <tag>Customization</tag>
+      </fr>
    </tags>
    <screenshots>
       <screenshot>https://github.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner/blob/master/img/screenshot.png</screenshot>
