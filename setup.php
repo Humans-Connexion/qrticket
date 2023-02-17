@@ -14,7 +14,7 @@
    ------------------------------------------------------------------------
  */
 
-define ("PLUGIN_CUSTOMIZATIONS_VERSION", "0.2.4");
+define ("PLUGIN_CUSTOMIZATIONS_VERSION", "0.3.0");
 
 // Minimal GLPI version, inclusive
 define('PLUGIN_CUSTOMIZATIONS_MIN_GLPI', '10.0.0');
