@@ -46,7 +46,10 @@ class PluginCustomizationsQRcode {
       $item = new $itemType();
       $item->getFromDB($itemId);
 
-      $URLById= 'URL = ' . $CFG_GLPI['url_base'] . "/front/helpdesk.public.php?create_ticket=1" . "?asset=" . $itemType . 's' . " - " .  $item->fields['name'] . " - " . $item->fields['serial'] . " - " . $item->fields['otherserial'];
+      $name =  !  empty($item->fields['name'])? '-' .  $item->fields['name']:'';
+      $serial =  !  empty($item->fields['serial'])? '-' .  $item->fields['serial']:'';
+      $invNumber =  !  empty($item->fields['otherserial'])? '-' .  $item->fields['otherserial']:'';
+      $URLById= 'URL = ' . $CFG_GLPI['url_base'] . "/front/helpdesk.public.php?create_ticket=1" . "?asset=" . $itemType . 's' . $name . $serial . $invNumber;
       $a_content = [];
 
       $b_content = [];
