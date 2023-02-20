@@ -1,3 +1,11 @@
-#: hook.php:49
+#: hook.php:21
+msgid "Customizations"
+msgstr "Customizations"
+
+#: hook.php:21
 msgid "Print QRcodes"
 msgstr "Imprimer des QRcode"
+
+#: js/customizations.js:69
+msgid "Asset not found!"
+msgstr "Actif introuvable!"

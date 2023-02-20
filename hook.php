@@ -18,7 +18,7 @@
 // Define actions :
 function plugin_customizations_MassiveActions($itemtype) {
    $generate_qrcode_action  = 'PluginCustomizationsQRcode' . MassiveAction::CLASS_ACTION_SEPARATOR . 'Generate';
-   $generate_qrcode_label   = '<i class="fas fa-qrcode"></i> ' . __('Customizations', 'qrcode')." - ".__('Print QRcodes', 'qrcode');
+   $generate_qrcode_label   = '<i class="fas fa-qrcode"></i> ' . __('Customizations', 'customizations')." - ".__('Print QRcodes', 'customizations');
 
    if (!is_a($itemtype, CommonDBTM::class, true)) {
       return [];
