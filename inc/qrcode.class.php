@@ -73,7 +73,7 @@ class PluginCustomizationsQRcode {
          QRcode::png($codeContents,
                      GLPI_PLUGIN_DOC_DIR.'/customizations/_tmp_'.$rand.'-'.$number.'.png',
                      QR_ECLEVEL_L,
-                     4);
+                     2);
          return [GLPI_PLUGIN_DOC_DIR.'/customizations/_tmp_'.$rand.'-'.$number.'.png',$b_content];
       }
       return false;
