@@ -1,13 +1,13 @@
 <?php
 /*
    ------------------------------------------------------------------------
-   Customizations
+   QRTicket
 
-   Copyright (C) 2023 by the Customizations plugin Development Team.
+   Copyright (C) 2023 by the Human's Connexion Development Team.
 
    ------------------------------------------------------------------------
 
-   @package   Plugin Customizations
+   @package   Plugin QRTicket
    @author    Sia Simeonova
    @since     2023
 
@@ -19,8 +19,8 @@
 include ('../../../inc/includes.php');
 // Session::checkRight("config", UPDATE);
 // To be available when plugin is not activated
-Plugin::load('customizations');
-Html::header(__('Customizations', 'customizations'), $_SERVER['PHP_SELF'], "config", "plugins");
+Plugin::load('qrticket');
+Html::header(__('QRTicket', 'qrticket'), $_SERVER['PHP_SELF'], "config", "plugins");
 $itemtype = $_GET['itemtype'];
 $item = new $itemtype();
 $itemInventoryNumber[] = $_GET['inventoryNumber'];

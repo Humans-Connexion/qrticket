@@ -1,6 +1,6 @@
 <root>
-   <name>Customizations</name>
-   <key>customizations</key>
+   <name>QRTicket</name>
+   <key>qrticket</key>
    <state>stable</state>
    <description>
       <short>

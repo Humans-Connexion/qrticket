@@ -19,13 +19,13 @@ msgstr ""
 
 #: hook.php:21 front/config.php:52 front/checkItemByInv.php:23
 #: inc/profile.class.php:50 inc/profile.class.php:86
-msgid "Customizations"
+msgid "qrticket"
 msgstr ""
 
 #: hook.php:21
 msgid "Print QRcodes"
 msgstr ""
 
-#: js/customizations.js:69
+#: js/qrticket.js:69
 msgid "Asset not found!"
 msgstr ""

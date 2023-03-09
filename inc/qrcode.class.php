@@ -1,13 +1,13 @@
 <?php
 /*
    ------------------------------------------------------------------------
-   Customizations
+   QRTicket
 
-   Copyright (C) 2023 by the Customizations plugin Development Team.
+   Copyright (C) 2023 by the Human's Connexion Development Team.
 
    ------------------------------------------------------------------------
 
-   @package   Plugin Customizations
+   @package   Plugin QRTicket
    @author    Sia Simeonova
    @since     2023
 
@@ -18,9 +18,9 @@ if (!defined('GLPI_ROOT')) {
     die("You can't access directly to this file");
 }
 
-class PluginCustomizationsQRcode {
+class PluginQrticketQRcode {
 
-   const DOC_PATH = GLPI_PLUGIN_DOC_DIR.'/customizations/';
+   const DOC_PATH = GLPI_PLUGIN_DOC_DIR.'/qrticket/';
 
    const FILE_EXTENSION = 'png';
    const CONFIGS = [
@@ -71,17 +71,17 @@ class PluginCustomizationsQRcode {
       if (count($a_content) > 0) {
          $codeContents = implode("\n", $a_content);
          QRcode::png($codeContents,
-                     GLPI_PLUGIN_DOC_DIR.'/customizations/_tmp_'.$rand.'-'.$number.'.png',
+                     GLPI_PLUGIN_DOC_DIR.'/qrticket/_tmp_'.$rand.'-'.$number.'.png',
                      QR_ECLEVEL_L,
                      2);
-         return [GLPI_PLUGIN_DOC_DIR.'/customizations/_tmp_'.$rand.'-'.$number.'.png',$b_content];
+         return [GLPI_PLUGIN_DOC_DIR.'/qrticket/_tmp_'.$rand.'-'.$number.'.png',$b_content];
       }
       return false;
    }
 
    static function cleanQRcodeFiles($rand, $number) {
       for ($i = 0; $i < $number; $i++) {
-         unlink(GLPI_PLUGIN_DOC_DIR.'/customizations/_tmp_'.$rand.'-'.$i.'.png');
+         unlink(GLPI_PLUGIN_DOC_DIR.'/qrticket/_tmp_'.$rand.'-'.$i.'.png');
       }
    }
 
@@ -211,7 +211,7 @@ class PluginCustomizationsQRcode {
                $filePath              = explode('/', $file);
                $filename              = $filePath[count($filePath)-1];
 
-               $msg = "<a href='".Plugin::getWebDir('customizations').'/front/send.php?file='.urlencode($filename)."'>".__('Generated file', 'customizations')."</a>";
+               $msg = "<a href='".Plugin::getWebDir('qrticket').'/front/send.php?file='.urlencode($filename)."'>".__('Generated file', 'qrticket')."</a>";
                Session::addMessageAfterRedirect($msg);
                static::cleanQRcodeFiles($rand, $number);
             }
@@ -240,7 +240,7 @@ class PluginCustomizationsQRcode {
 
       $pdf = new Cezpdf($size, $orientation);
       $pdf->tempPath = GLPI_TMP_DIR;
-      $pdf->selectFont(Plugin::getPhpDir('customizations')."/lib/ezpdf/fonts/Helvetica.afm");
+      $pdf->selectFont(Plugin::getPhpDir('qrticket')."/lib/ezpdf/fonts/Helvetica.afm");
       $pdf->ezSetMargins($config['marginTop'], $config['marginBottom'], $config['marginLeft'], $config['marginRight']);
       $pdf->ezStartPageNumbers($pdf->ez['pageWidth']-30, 10, 10, 'left', '{PAGENUM} / {TOTALPAGENUM}').
       $width   = $config['maxCodeWidth'];
@@ -328,7 +328,7 @@ class PluginCustomizationsQRcode {
       $pdfFile = $_SESSION['glpiID'].'_'.$type.'.pdf';
 
       file_put_contents(static::DOC_PATH.$pdfFile, $file);
-      return '/files/_plugins/customizations/'.$pdfFile;
+      return '/files/_plugins/qrticket/'.$pdfFile;
    }
 
    function create($p_code, $p_type, $p_ext) {

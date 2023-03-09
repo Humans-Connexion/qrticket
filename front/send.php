@@ -1,13 +1,13 @@
 <?php
 /*
    ------------------------------------------------------------------------
-   Customizations
+   QRTicket
 
-   Copyright (C) 2023 by the Customizations plugin Development Team.
+   Copyright (C) 2023 by the Human's Connexion Development Team.
 
    ------------------------------------------------------------------------
 
-   @package   Plugin Customizations
+   @package   Plugin QRTicket
    @author    Sia Simeonova
    @since     2023
 
@@ -19,7 +19,7 @@ include ('../../../inc/includes.php');
 if (!defined("GLPI_PLUGIN_DOC_DIR")) {
     define("GLPI_PLUGIN_DOC_DIR", GLPI_ROOT . "/files/_plugins");
 }
-$docDir = GLPI_PLUGIN_DOC_DIR.'/customizations';
+$docDir = GLPI_PLUGIN_DOC_DIR.'/qrticket';
 
 if (isset($_GET['file'])) {
    $filename = $_GET['file'];
@@ -27,7 +27,7 @@ if (isset($_GET['file'])) {
    // Security test : document in $docDir
    if (strstr($filename, "../") || strstr($filename, "..\\")) {
       echo "Security attack !!!";
-      Toolbox::logDebug("[Plugin customizations][security][sendfile] ".
+      Toolbox::logDebug("[Plugin qrticket][security][sendfile] ".
                $_SESSION["glpiname"]." try to get a non standard file : ".$filename);
       exit;
    }

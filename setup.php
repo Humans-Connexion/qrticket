@@ -1,50 +1,50 @@
 <?php
 /*
    ------------------------------------------------------------------------
-   Customizations
+   QRTicket
 
-   Copyright (C) 2023 by the Customizations plugin Development Team.
+   Copyright (C) 2023 by the Human's Connexion Development Team.
 
    ------------------------------------------------------------------------
 
-   @package   Plugin Customizations
+   @package   Plugin QRTicket
    @author    Sia Simeonova
    @since     2023
 
    ------------------------------------------------------------------------
  */
 
-define ("PLUGIN_CUSTOMIZATIONS_VERSION", "0.3.3");
+define ("PLUGIN_QRTICKET_VERSION", "0.4.1");
 
 // Minimal GLPI version, inclusive
-define('PLUGIN_CUSTOMIZATIONS_MIN_GLPI', '10.0.0');
+define('PLUGIN_QRTICKET_MIN_GLPI', '10.0.0');
 // Maximum GLPI version, exclusive
-define('PLUGIN_CUSTOMIZATIONS_MAX_GLPI', '10.0.99');
+define('PLUGIN_QRTICKET_MAX_GLPI', '10.0.99');
 
 // Init the hooks of the plugins -Needed
-function plugin_init_customizations() {
+function plugin_init_qrticket() {
    global $PLUGIN_HOOKS;
 
    require_once(__DIR__ . '/vendor/autoload.php');
 
-   $PLUGIN_HOOKS['csrf_compliant']['customizations'] = true;
+   $PLUGIN_HOOKS['csrf_compliant']['qrticket'] = true;
 
-   $PLUGIN_HOOKS['use_massive_action']['customizations'] = 1;
+   $PLUGIN_HOOKS['use_massive_action']['qrticket'] = 1;
 
-   $PLUGIN_HOOKS['add_javascript']['customizations'] = array('js/customizations.js');
+   $PLUGIN_HOOKS['add_javascript']['qrticket'] = array('js/qrticket.js');
 }
 
-function plugin_version_customizations() {
+function plugin_version_qrticket() {
 
    return [
-      'name'           => 'Customizations',
-      'shortname'      => 'customizations',
-      'version'        => PLUGIN_CUSTOMIZATIONS_VERSION,
+      'name'           => 'qrticket',
+      'shortname'      => 'qrticket',
+      'version'        => PLUGIN_QRTICKET_VERSION,
       'author'         => '<a href="mailto:s.simeonova@tinqin.com">Sia Simeonova</a>',
       'requirements'   => [
          'glpi' => [
-            'min' => PLUGIN_CUSTOMIZATIONS_MIN_GLPI,
-            'max' => PLUGIN_CUSTOMIZATIONS_MAX_GLPI,
+            'min' => PLUGIN_QRTICKET_MIN_GLPI,
+            'max' => PLUGIN_QRTICKET_MAX_GLPI,
          ]
       ]
    ];

@@ -1,6 +1,6 @@
 <root>
-   <name>Customizations</name>
-   <key>customizations</key>
+   <name>QRTicket</name>
+   <key>qrticket</key>
    <state>stable</state>
    <logo>https://github.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner/blob/master/logo.jpeg</logo>
    <description>
@@ -34,10 +34,10 @@
    <license>GPL v2+</license>
    <tags>
       <en>
-         <tag>Customization</tag>
+         <tag>qrticket</tag>
       </en>
       <fr>
-         <tag>Customization</tag>
+         <tag>qrticket</tag>
       </fr>
    </tags>
    <screenshots>
