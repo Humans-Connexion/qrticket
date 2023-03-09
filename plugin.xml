@@ -19,7 +19,7 @@
    </authors>
    <versions>
       <version>
-         <num>0.2.4</num>
+         <num>0.4.2</num>
          <compatibility>~10.0.5</compatibility>
          <download_url>https://github.com/Humans-Connexion/qrticket/archive/refs/tags/0.4.2.zip</download_url>
       </version>
