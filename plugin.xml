@@ -12,8 +12,8 @@
          <en><![CDATA[Customize computer's fields and add functionality for QR code creation.]]></en>
       </long>
    </description>
-   <homepage>https://github.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner</homepage>
-   <download>https://github.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner/releases</download>
+   <homepage>https://github.com/Humans-Connexion/qrticket</homepage>
+   <download>https://github.com/Humans-Connexion/qrticket/releases</download>
    <authors>
       <author>Humans-Connexion</author>
    </authors>
@@ -21,7 +21,7 @@
       <version>
          <num>0.2.4</num>
          <compatibility>~10.0.5</compatibility>
-         <download_url>https://github.com/Humans-Connexion/GLPI-Plugin-QR-code-scanner/archive/refs/tags/0.2.4.zip</download_url>
+         <download_url>https://github.com/Humans-Connexion/qrticket/archive/refs/tags/0.4.2.zip</download_url>
       </version>
    </versions>
    <langs>
