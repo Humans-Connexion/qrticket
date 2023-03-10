@@ -2,6 +2,7 @@
    <name>QRTicket</name>
    <key>qrticket</key>
    <state>stable</state>
+   <logo>https://github.com/Humans-Connexion/qrticket/blob/master/logo.jpeg</logo>
    <description>
       <short>
          <fr><![CDATA[Personnalisez les champs de l'ordinateur et ajoutez des fonctionnalités pour la création de code QR.]]></fr>
@@ -21,7 +22,7 @@
       <version>
          <num>0.4.3</num>
          <compatibility>~10.0.6</compatibility>
-         <download_url>https://github.com/Humans-Connexion/qrticket/archive/refs/tags/0.4.2.zip</download_url>
+         <download_url>https://github.com/Humans-Connexion/qrticket/archive/refs/tags/0.4.3.zip</download_url>
       </version>
       <version>
          <num>0.4.2</num>
