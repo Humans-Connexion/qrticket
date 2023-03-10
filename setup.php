@@ -14,7 +14,7 @@
    ------------------------------------------------------------------------
  */
 
-define ("PLUGIN_QRTICKET_VERSION", "0.4.3");
+define ("PLUGIN_QRTICKET_VERSION", "0.4.2");
 
 // Minimal GLPI version, inclusive
 define('PLUGIN_QRTICKET_MIN_GLPI', '10.0.0');
