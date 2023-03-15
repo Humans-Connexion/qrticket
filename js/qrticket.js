@@ -1,36 +1,36 @@
-function hideMenuElements() {
-    let allowedValuesEng = ['Computer', 'Computers', 'Contracts'];
-    let allowedValuesFr = ['Ordinateur', 'Ordinateurs', 'Contrats'];
+function hideMenuElements() { // Note:: Not needed at the moment
+    // let allowedValuesEng = ['Computer', 'Computers', 'Contracts'];
+    // let allowedValuesFr = ['Ordinateur', 'Ordinateurs', 'Contrats'];
 
-    // FIX DESKTOP DROPDOWN MENU
-    let fields = document.getElementsByClassName('justify-content-between');
-    if (fields != undefined) {
-        for (let field of fields) {
-            let title = field.textContent.trim();
-            if (
-                (!allowedValuesEng.includes(title)) &&
-                (!allowedValuesFr.includes(title)) &&
-                (!title.includes('Tickets'))
-            ) {
-                field.classList.add("d-none");
-            }
-        }
-    }
+    // // FIX DESKTOP DROPDOWN MENU
+    // let fields = document.getElementsByClassName('justify-content-between');
+    // if (fields != undefined) {
+    //     for (let field of fields) {
+    //         let title = field.textContent.trim();
+    //         if (
+    //             (!allowedValuesEng.includes(title)) &&
+    //             (!allowedValuesFr.includes(title)) &&
+    //             (!title.includes('Tickets'))
+    //         ) {
+    //             field.classList.add("d-none");
+    //         }
+    //     }
+    // }
 
-    // FIX MOBILE DROPDOWN MENU
-    let dropdown = document.getElementById('tabspanel-select');
-    if (dropdown !== null) {
-        for (var i = 0; i < dropdown.length; i++) {
-            let item = dropdown.options[i].text;
-            if ((!allowedValuesEng.includes(item)) &&
-                (!allowedValuesFr.includes(item)) &&
-                (!item.includes('Tickets'))) {
-                dropdown.options[i].classList.add("d-none");
-                dropdown.options[i].selected = false;
-            }
-        }
-        dropdown.options[0].selected = true;
-    }
+    // // FIX MOBILE DROPDOWN MENU
+    // let dropdown = document.getElementById('tabspanel-select');
+    // if (dropdown !== null) {
+    //     for (var i = 0; i < dropdown.length; i++) {
+    //         let item = dropdown.options[i].text;
+    //         if ((!allowedValuesEng.includes(item)) &&
+    //             (!allowedValuesFr.includes(item)) &&
+    //             (!item.includes('Tickets'))) {
+    //             dropdown.options[i].classList.add("d-none");
+    //             dropdown.options[i].selected = false;
+    //         }
+    //     }
+    //     dropdown.options[0].selected = true;
+    // }
 }
 
 function autoloadAssetInTicket(asset) {

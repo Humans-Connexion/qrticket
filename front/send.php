@@ -1,4 +1,5 @@
 <?php
+
 /*
    ------------------------------------------------------------------------
    QRTicket
@@ -15,6 +16,8 @@
  */
 
 include ('../../../inc/includes.php');
+
+Session::checkRight("computer", READ);
 
 if (!defined("GLPI_PLUGIN_DOC_DIR")) {
     define("GLPI_PLUGIN_DOC_DIR", GLPI_ROOT . "/files/_plugins");

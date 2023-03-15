@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: hook.php:21 front/config.php:52 front/checkItemByInv.php:23
+#: hook.php:21
 #: inc/profile.class.php:50 inc/profile.class.php:86
 msgid "qrticket"
 msgstr ""
