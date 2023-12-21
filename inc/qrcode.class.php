@@ -60,8 +60,8 @@ class PluginQrticketQRcode {
       }
 
       if ($data['displayname']) {
-         $label = ('Item Name').': ';
-         $b_content[] = $label.$item->fields['name'];
+         $label = $item->fields['name'];
+         $b_content[] = $label;
       }
 
       if ($data['url']  && !$item->no_form_page) {
