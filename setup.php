@@ -19,7 +19,7 @@ define ("PLUGIN_QRTICKET_VERSION", "0.4.3");
 // Minimal GLPI version, inclusive
 define('PLUGIN_QRTICKET_MIN_GLPI', '10.0.0');
 // Maximum GLPI version, exclusive
-define('PLUGIN_QRTICKET_MAX_GLPI', '10.0.99');
+define('PLUGIN_QRTICKET_MAX_GLPI', '10.1.0');
 
 // Init the hooks of the plugins -Needed
 function plugin_init_qrticket() {
