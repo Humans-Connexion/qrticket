@@ -24,7 +24,7 @@
       <version>
          <num>0.4.3</num>
          <compatibility>~10.1.0</compatibility>
-         <download_url>https://github.com/Humans-Connexion/qrticket/releases/download/0.4.2/glpi-qrticket-0.4.2.tar.gz</download_url>
+         <download_url>https://github.com/Humans-Connexion/qrticket/releases/download/0.4.3/glpi-qrticket-0.4.3.tar.gz</download_url>
       </version>
       <version>
          <num>0.4.2</num>
