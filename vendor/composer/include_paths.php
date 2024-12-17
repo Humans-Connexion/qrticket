@@ -6,10 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    $vendorDir . '/pear/archive_tar',
     $vendorDir . '/pear/console_getopt',
-    $vendorDir . '/pear/image_barcode',
-    $vendorDir . '/pear/pear',
-    $vendorDir . '/pear/structures_graph',
     $vendorDir . '/pear/xml_util',
+    $vendorDir . '/pear/structures_graph',
+    $vendorDir . '/pear/archive_tar',
+    $vendorDir . '/pear/pear',
 );

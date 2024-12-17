@@ -780,7 +780,11 @@ class PEAR_Registry extends PEAR
 
         $fp = @fopen($this->filemap, 'r');
         if (!$fp) {
-            $last_errormsg = error_get_last();
+            $last_errormsg = '';
+            $last_error = error_get_last();
+            if (!empty($last_error['message'])) {
+                $last_errormsg = $last_error['message'];
+            }
             return $this->raiseError('PEAR_Registry: could not open filemap "' . $this->filemap . '"', PEAR_REGISTRY_ERROR_FILE, null, null, $last_errormsg);
         }
 
@@ -1139,7 +1143,7 @@ class PEAR_Registry extends PEAR
         clearstatcache();
         $this->_closePackageFile($fp);
         $data = file_get_contents($this->_packageFileName($package, $channel));
-        $data = unserialize($data);
+        $data = @unserialize($data);
         if ($key === null) {
             return $data;
         }

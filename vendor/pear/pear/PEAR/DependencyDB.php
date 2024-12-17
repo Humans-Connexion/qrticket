@@ -501,7 +501,11 @@ class PEAR_DependencyDB
         }
 
         if (!is_resource($this->_lockFp)) {
-            $last_errormsg = error_get_last();
+            $last_errormsg = '';
+            $last_error = error_get_last();
+            if (!empty($last_error['message'])) {
+                $last_errormsg = $last_error['message'];
+            }
             return PEAR::raiseError("could not create Dependency lock file" .
                                      (isset($last_errormsg) ? ": " . $last_errormsg : ""));
         }
@@ -556,7 +560,7 @@ class PEAR_DependencyDB
 
         clearstatcache();
         fclose($fp);
-        $data = unserialize(file_get_contents($this->_depdb));
+        $data = @unserialize(file_get_contents($this->_depdb));
         $this->_cache = $data;
         return $data;
     }

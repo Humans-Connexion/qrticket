@@ -5,18 +5,17 @@ REM PHP version 5
 REM ----------------------------------------------------------------------
 REM Copyright (c) 1997-2004 The PHP Group
 REM ----------------------------------------------------------------------
-REM  This source file is subject to version 3.0 of the PHP license,
+REM  This source file is subject to the New BSD License,
 REM  that is bundled with this package in the file LICENSE, and is
 REM  available at through the world-wide-web at
-REM  http://www.php.net/license/3_0.txt.
-REM  If you did not receive a copy of the PHP license and are unable to
+REM  http://opensource.org/licenses/bsd-license.php.
+REM  If you did not receive a copy of the New BSD License and are unable to
 REM  obtain it through the world-wide-web, please send a note to
 REM  license@php.net so we can mail you a copy immediately.
 REM ----------------------------------------------------------------------
 REM  Authors:     Alexander Merz (alexmerz@php.net)
 REM ----------------------------------------------------------------------
 REM
-REM  Last updated 02/08/2004 ($Id$ is not replaced if the file is binary)
 
 REM change this lines to match the paths of your system
 REM -------------------
@@ -110,6 +109,6 @@ ECHO The current value is:
 ECHO %PHP_PEAR_PHP_BIN%
 GOTO END
 :RUN
-"%PHP_PEAR_PHP_BIN%" -C -n -d date.timezone=UTC -d output_buffering=1 -d safe_mode=0 -d "include_path='%PHP_PEAR_INSTALL_DIR%'" -d register_argc_argv="On" -d variables_order=EGPCS -f "%PHP_PEAR_INSTALL_DIR%\peclcmd.php" -- %1 %2 %3 %4 %5 %6 %7 %8 %9
+"%PHP_PEAR_PHP_BIN%" -C -d date.timezone=UTC -d output_buffering=1 -d safe_mode=0 -d "include_path='%PHP_PEAR_INSTALL_DIR%'" -d register_argc_argv="On" -d variables_order=EGPCS -f "%PHP_PEAR_INSTALL_DIR%\peclcmd.php" -- %1 %2 %3 %4 %5 %6 %7 %8 %9
 :END
 @ECHO ON
