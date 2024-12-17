@@ -79,11 +79,7 @@ if (getenv('PHP_PEAR_HTTP_PROXY')) {
 if (getenv('PHP_PEAR_INSTALL_DIR')) {
     define('PEAR_CONFIG_DEFAULT_PHP_DIR', getenv('PHP_PEAR_INSTALL_DIR'));
 } else {
-    if (@file_exists($PEAR_INSTALL_DIR) && is_dir($PEAR_INSTALL_DIR)) {
-        define('PEAR_CONFIG_DEFAULT_PHP_DIR', $PEAR_INSTALL_DIR);
-    } else {
-        define('PEAR_CONFIG_DEFAULT_PHP_DIR', $PEAR_INSTALL_DIR);
-    }
+    define('PEAR_CONFIG_DEFAULT_PHP_DIR', $PEAR_INSTALL_DIR);
 }
 
 // Default for metadata_dir
@@ -727,7 +723,7 @@ class PEAR_Config extends PEAR
 
         $t_conf = new PEAR_Config($user_file, $system_file, false, $strict);
         if ($t_conf->_errorsFound > 0) {
-             return $t_conf->lastError;
+             return $t_conf->_lastError;
         }
 
         $GLOBALS['_PEAR_Config_instance'] = &$t_conf;
@@ -775,7 +771,7 @@ class PEAR_Config extends PEAR
             }
 
             $this->_errorsFound++;
-            $this->lastError = $data;
+            $this->_lastError = $data;
 
             return $data;
         }
@@ -928,7 +924,7 @@ class PEAR_Config extends PEAR
             }
 
             $this->_errorsFound++;
-            $this->lastError = $data;
+            $this->_lastError = $data;
 
             return $data;
         }
@@ -1074,10 +1070,7 @@ class PEAR_Config extends PEAR
         }
 
         if ($version && version_compare("$version", '1', '<')) {
-            // no '@', it is possible that unserialize
-            // raises a notice but it seems to block IO to
-            // STDOUT if a '@' is used and a notice is raise
-            $data = unserialize($contents);
+            $data = @unserialize($contents);
 
             if (!is_array($data) && !$data) {
                 if ($contents == serialize(false)) {
