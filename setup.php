@@ -14,10 +14,10 @@
    ------------------------------------------------------------------------
  */
 
-define ("PLUGIN_QRTICKET_VERSION", "0.4.3");
+define ("PLUGIN_QRTICKET_VERSION", "0.4.4");
 
 // Minimal GLPI version, inclusive
-define('PLUGIN_QRTICKET_MIN_GLPI', '10.0.0');
+define('PLUGIN_QRTICKET_MIN_GLPI', '10.0.17');
 // Maximum GLPI version, exclusive
 define('PLUGIN_QRTICKET_MAX_GLPI', '10.1.0');
 
